@@ -324,7 +324,6 @@ bindsym $mod+$mod2+r exec /home/jtoft/.screenlayout/offon.sh
 for_window [all] title_window_icon on
 
 include i3.autostart
-include i3.keybinds
 # Settings
 focus_wrapping no
 

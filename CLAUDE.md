@@ -7,9 +7,6 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 This is an i3 window manager configuration directory containing:
 
 - `config` - Main i3 configuration file with keybindings, window rules, and appearance settings
-- `config.old` - Backup of previous i3 configuration
-- `i3.keybinds` - Additional keybinding definitions (mostly commented out)
-- `rofi.sh` - Script for rofi window management functionality
 
 ## Architecture
 
@@ -56,7 +53,7 @@ i3 -C -c ~/.config/i3/config
 
 ### Managing Configuration Files
 - Primary config: `/home/jtoft/.config/i3/config`
-- The config includes `i3.autostart` and `i3.keybinds` files
+- The config includes `i3.autostart` file for startup applications
 - Configuration uses include statements for modular organization
 
 ### Display Management
