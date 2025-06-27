@@ -1,0 +1,26 @@
+
+# switch to workspace
+#bindsym $mod+1 exec --no-startup-id ~/kod/i3_stuff/i3-workspace.sh goto 1
+#bindsym $mod+2 exec --no-startup-id ~/kod/i3_stuff/i3-workspace.sh goto 2
+#bindsym $mod+3 exec --no-startup-id ~/kod/i3_stuff/i3-workspace.sh goto 3
+#bindsym $mod+4 exec --no-startup-id ~/kod/i3_stuff/i3-workspace.sh goto 4
+#bindsym $mod+5 exec --no-startup-id ~/kod/i3_stuff/i3-workspace.sh goto 5
+#bindsym $mod+6 exec --no-startup-id ~/kod/i3_stuff/i3-workspace.sh goto 6
+#bindsym $mod+7 exec --no-startup-id ~/kod/i3_stuff/i3-workspace.sh goto 7
+#bindsym $mod+8 exec --no-startup-id ~/kod/i3_stuff/i3-workspace.sh goto 8
+#bindsym $mod+9 exec --no-startup-id ~/kod/i3_stuff/i3-workspace.sh goto 9
+#bindsym $mod+0 exec --no-startup-id ~/kod/i3_stuff/i3-workspace.sh goto 0
+#
+## move focused container to workspace
+#bindsym $mod+Shift+1 exec --no-startup-id ~/kod/i3_stuff/i3-workspace.sh move 1
+#bindsym $mod+Shift+2 exec --no-startup-id ~/kod/i3_stuff/i3-workspace.sh move 2
+#bindsym $mod+Shift+3 exec --no-startup-id ~/kod/i3_stuff/i3-workspace.sh move 3
+#bindsym $mod+Shift+4 exec --no-startup-id ~/kod/i3_stuff/i3-workspace.sh move 4
+#bindsym $mod+Shift+5 exec --no-startup-id ~/kod/i3_stuff/i3-workspace.sh move 5
+#bindsym $mod+Shift+6 exec --no-startup-id ~/kod/i3_stuff/i3-workspace.sh move 6
+#bindsym $mod+Shift+7 exec --no-startup-id ~/kod/i3_stuff/i3-workspace.sh move 7
+#bindsym $mod+Shift+8 exec --no-startup-id ~/kod/i3_stuff/i3-workspace.sh move 8
+#bindsym $mod+Shift+9 exec --no-startup-id ~/kod/i3_stuff/i3-workspace.sh move 9
+#bindsym $mod+Shift+0 exec --no-startup-id ~/kod/i3_stuff/i3-workspace.sh move 0
+#
+#bindsym $mod+Tab workspace back_and_forth
