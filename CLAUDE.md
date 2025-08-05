@@ -52,13 +52,13 @@ i3 -C -c ~/.config/i3/config
 ```
 
 ### Managing Configuration Files
-- Primary config: `/home/jtoft/.config/i3/config`
+- Primary config: `~/.config/i3/config`
 - The config includes `i3.autostart` file for startup applications
 - Configuration uses include statements for modular organization
 
 ### Display Management
-- Screen layout script: `/home/jtoft/.screenlayout/latest.sh` (executed on startup)
-- Display switching: `$mod+$mod2+r` runs `/home/jtoft/.screenlayout/offon.sh`
+- Screen layout script: `~/.screenlayout/latest.sh` (executed on startup)
+- Display switching: `$mod+$mod2+r` runs `~/.screenlayout/offon.sh`
 - Workspace 1 assigned to output DP-0
 
 ### Application Integration

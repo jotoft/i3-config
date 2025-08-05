@@ -36,19 +36,3 @@ client.unfocused        $surface0  $base      $text   $surface0  $surface0
 client.urgent           $red       $base      $text   $red       $red
 client.placeholder      $base      $base      $text   $base      $base
 client.background       $base
-
-# Bar colors (if using i3bar)
-bar {
-    colors {
-        background $base
-        statusline $text
-        separator  $overlay0
-
-        # class            border     backgr.    text
-        focused_workspace  $mauve     $mauve     $base
-        active_workspace   $surface2  $base      $text
-        inactive_workspace $surface0  $base      $text
-        urgent_workspace   $red       $red       $base
-        binding_mode       $yellow    $yellow    $base
-    }
-}

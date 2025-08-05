@@ -43,7 +43,7 @@ workspace_auto_back_and_forth yes
 
 # Rofi
 bindsym $mod+space exec rofi -dpi 286 -show combi
-bindsym $mod+Shift+t exec /home/jtoft/.config/i3/rofi-theme-switcher.sh
+bindsym $mod+Shift+t exec ~/.config/i3/rofi-theme-switcher.sh
 bindsym --whole-window $mod+button9 exec rofi -dpi 324 -show window -me-accept-entry "" -me-accept-custom MousePrimary -window-command 'i3-msg [[id=\"{window}\"]] move workspace current'
 bindsym $mod2+space exec rofi -dpi 180 -show window -me-accept-entry "" -kb-accept-entry KP_Enter -kb-accept-alt Return -window-command 'i3-msg [[id=\"{window}\"]] move workspace current &&  i3-msg [[id=\"{window}\"]] focus'
 
@@ -306,14 +306,14 @@ assign [class="Zim"] ℰ
 
 for_window [class="^.*"] border pixel 1
 # Startup Applications
-# exec --no-startup-id /home/jtoft/.screenlayout/ultrawide_27_left.sh
+# exec --no-startup-id ~/.screenlayout/ultrawide_27_left.sh
 exec --no-startup-id picom --config ~/.config/picom/picom.conf
-exec --no-startup-id /home/jtoft/.screenlayout/latest.sh
+exec --no-startup-id ~/.screenlayout/latest.sh
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id flameshot
 exec --no-startup-id nm-applet
 
-bindsym $mod+$mod2+r exec /home/jtoft/.screenlayout/offon.sh
+bindsym $mod+$mod2+r exec ~/.screenlayout/offon.sh
 
 for_window [all] title_window_icon on
 
