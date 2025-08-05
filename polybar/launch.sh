@@ -8,8 +8,10 @@ killall -q polybar
 # Wait until the processes have been shut down
 while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
-# Launch bar
+# Launch bars
 echo "---" | tee -a /tmp/polybar.log
-polybar main -c ~/.config/i3/polybar/config.ini 2>&1 | tee -a /tmp/polybar.log & disown
+polybar left -c ~/.config/i3/polybar/config.ini 2>&1 | tee -a /tmp/polybar-left.log & disown
+polybar center -c ~/.config/i3/polybar/config.ini 2>&1 | tee -a /tmp/polybar-center.log & disown
+polybar right -c ~/.config/i3/polybar/config.ini 2>&1 | tee -a /tmp/polybar-right.log & disown
 
-echo "Polybar launched..."
+echo "Polybar instances launched..."
