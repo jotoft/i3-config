@@ -307,7 +307,7 @@ assign [class="Zim"] ℰ
 for_window [class="^.*"] border pixel 1
 # Startup Applications
 # exec --no-startup-id ~/.screenlayout/ultrawide_27_left.sh
-exec --no-startup-id picom --config ~/.config/picom/picom.conf
+exec --no-startup-id picom --config ~/.config/i3/picom.conf
 exec --no-startup-id ~/.screenlayout/latest.sh
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id flameshot

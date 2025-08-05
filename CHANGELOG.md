@@ -2,6 +2,12 @@
 
 All notable changes to this i3 configuration will be documented in this file.
 
+## [Unreleased]
+
+### Changed
+- Moved picom configuration into i3 repository for better organization
+- Updated picom launch command to use `~/.config/i3/picom.conf`
+
 ## [2025-08-05]
 
 ### Added
