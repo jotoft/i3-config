@@ -44,6 +44,7 @@ workspace_auto_back_and_forth yes
 # Rofi
 bindsym $mod+space exec rofi -config ~/.config/i3/rofi/config.rasi -show drun
 bindsym $mod+Shift+t exec ~/.config/i3/rofi-theme-switcher.sh
+bindsym $mod+Shift+p exec ~/.config/i3/polybar/launch.sh
 bindsym --whole-window $mod+button9 exec rofi -config ~/.config/i3/rofi/config.rasi -show window -me-accept-entry "" -me-accept-custom MousePrimary -window-command 'i3-msg [[id=\"{window}\"]] move workspace current'
 bindsym $mod2+space exec rofi -config ~/.config/i3/rofi/config.rasi -show window -me-accept-entry "" -kb-accept-entry KP_Enter -kb-accept-alt Return -window-command 'i3-msg [[id=\"{window}\"]] move workspace current &&  i3-msg [[id=\"{window}\"]] focus'
 
@@ -260,7 +261,9 @@ bindsym $mod+r mode "Size"
 include themes/active-theme
 
 # Include bar configuration (which uses the theme variables)
-include bar.conf
+# include bar.conf
+# Using polybar instead
+exec_always --no-startup-id ~/.config/i3/polybar/launch.sh
 
 bindsym $mod2+g bar mode invisible
 bindsym $mod2+$mod+g bar mode toggle
