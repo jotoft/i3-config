@@ -42,10 +42,10 @@ bindsym $mod+grave scratchpad show
 workspace_auto_back_and_forth yes
 
 # Rofi
-bindsym $mod+space exec rofi -dpi 286 -show combi
+bindsym $mod+space exec rofi -config ~/.config/i3/rofi/config.rasi -show drun
 bindsym $mod+Shift+t exec ~/.config/i3/rofi-theme-switcher.sh
-bindsym --whole-window $mod+button9 exec rofi -dpi 324 -show window -me-accept-entry "" -me-accept-custom MousePrimary -window-command 'i3-msg [[id=\"{window}\"]] move workspace current'
-bindsym $mod2+space exec rofi -dpi 180 -show window -me-accept-entry "" -kb-accept-entry KP_Enter -kb-accept-alt Return -window-command 'i3-msg [[id=\"{window}\"]] move workspace current &&  i3-msg [[id=\"{window}\"]] focus'
+bindsym --whole-window $mod+button9 exec rofi -config ~/.config/i3/rofi/config.rasi -show window -me-accept-entry "" -me-accept-custom MousePrimary -window-command 'i3-msg [[id=\"{window}\"]] move workspace current'
+bindsym $mod2+space exec rofi -config ~/.config/i3/rofi/config.rasi -show window -me-accept-entry "" -kb-accept-entry KP_Enter -kb-accept-alt Return -window-command 'i3-msg [[id=\"{window}\"]] move workspace current &&  i3-msg [[id=\"{window}\"]] focus'
 
 bindsym $mod+Tab workspace back_and_forth
 #bindsym $mod2+b [class="firefox" floating_from="user"] move workspace current

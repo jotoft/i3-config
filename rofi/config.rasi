@@ -1,0 +1,24 @@
+/*
+ * Rofi Configuration
+ * This file imports the active Catppuccin theme
+ */
+
+configuration {
+    modi: "drun,run,window,ssh";
+    icon-theme: "Papirus";
+    show-icons: true;
+    terminal: "alacritty";
+    drun-display-format: "{icon} {name}";
+    location: 0;
+    disable-history: false;
+    hide-scrollbar: true;
+    display-drun: "   Apps ";
+    display-run: "   Run ";
+    display-window: "   Window ";
+    display-ssh: "   SSH ";
+    sidebar-mode: true;
+    dpi: -1;
+}
+
+/* Import the active theme - this will be a symlink */
+@import "active-theme.rasi"

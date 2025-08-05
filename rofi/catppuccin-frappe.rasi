@@ -1,0 +1,152 @@
+/*
+ * Catppuccin Frappé Theme for Rofi
+ */
+
+* {
+    /* Catppuccin Frappé Colors */
+    rosewater: #f2d5cf;
+    flamingo: #eebebe;
+    pink: #f4b8e4;
+    mauve: #ca9ee6;
+    red: #e78284;
+    maroon: #ea999c;
+    peach: #ef9f76;
+    yellow: #e5c890;
+    green: #a6d189;
+    teal: #81c8be;
+    sky: #99d1db;
+    sapphire: #85c1dc;
+    blue: #8caaee;
+    lavender: #babbf1;
+    text: #c6d0f5;
+    subtext1: #b5bfe2;
+    subtext0: #a5adce;
+    overlay2: #949cbb;
+    overlay1: #838ba7;
+    overlay0: #737994;
+    surface2: #626880;
+    surface1: #51576d;
+    surface0: #414559;
+    base: #303446;
+    mantle: #292c3c;
+    crust: #232634;
+    
+    /* Theme colors */
+    background: @base;
+    background-alt: @surface0;
+    foreground: @text;
+    selected: @mauve;
+    active: @green;
+    urgent: @red;
+    
+    border-radius: 10px;
+}
+
+window {
+    transparency: "real";
+    background-color: @background;
+    text-color: @foreground;
+    border: 2px;
+    border-color: @mauve;
+    border-radius: @border-radius;
+    width: 40%;
+    location: center;
+    x-offset: 0;
+    y-offset: 0;
+}
+
+prompt {
+    enabled: true;
+    padding: 0.5% 0.5% 0% 0.5%;
+    background-color: @background-alt;
+    text-color: @foreground;
+}
+
+entry {
+    background-color: @background-alt;
+    text-color: @foreground;
+    placeholder-color: @overlay0;
+    expand: true;
+    horizontal-align: 0;
+    placeholder: "Search";
+    padding: 0.5%;
+    blink: true;
+}
+
+inputbar {
+    children: [ prompt, entry ];
+    background-color: @background-alt;
+    text-color: @foreground;
+    expand: false;
+    border: 0% 0% 0.2% 0%;
+    border-radius: @border-radius;
+    border-color: @selected;
+    margin: 0% 0% 0% 0%;
+    padding: 1%;
+}
+
+listview {
+    background-color: @background;
+    columns: 1;
+    lines: 8;
+    spacing: 0.5%;
+    cycle: false;
+    dynamic: true;
+    layout: vertical;
+}
+
+mainbox {
+    background-color: @background;
+    border: 0%;
+    border-radius: 0%;
+    border-color: @selected;
+    children: [ inputbar, listview ];
+    spacing: 1%;
+    padding: 1%;
+}
+
+element {
+    background-color: @background;
+    text-color: @foreground;
+    orientation: horizontal;
+    border-radius: 0%;
+    padding: 0.5%;
+}
+
+element-icon {
+    background-color: inherit;
+    text-color: inherit;
+    horizontal-align: 0.5;
+    vertical-align: 0.5;
+    size: 24px;
+    border: 0px;
+}
+
+element-text {
+    background-color: inherit;
+    text-color: inherit;
+    expand: true;
+    horizontal-align: 0;
+    vertical-align: 0.5;
+    margin: 0% 0.25%;
+}
+
+element selected {
+    background-color: @selected;
+    text-color: @background;
+    border: 0% 0% 0% 0%;
+    border-radius: @border-radius;
+    border-color: @selected;
+}
+
+element urgent {
+    background-color: @urgent;
+    text-color: @background;
+    border-radius: @border-radius;
+}
+
+element active {
+    background-color: @active;
+    text-color: @background;
+    border-radius: @border-radius;
+}

@@ -27,14 +27,21 @@ for key in "☀️  Latte (Light)" "🍵  Frappé (Light-medium)" "☕  Macchiat
 done
 
 # Show rofi menu
-selected=$(echo -e "${options%\\n}" | rofi -dmenu -p "Select Theme" -theme-str 'window { width: 400px; }')
+selected=$(echo -e "${options%\\n}" | rofi -config ~/.config/i3/rofi/config.rasi -dmenu -p "Select Theme")
 
 # Remove checkmark if present
 selected="${selected% ✓}"
 
 # Switch theme if selection was made
 if [[ -n "$selected" && -n "${themes[$selected]}" ]]; then
+    # Update i3 theme
     ln -sf "$THEME_DIR/${themes[$selected]}" "$ACTIVE_THEME"
+    
+    # Update rofi theme
+    ROFI_THEME_DIR="$HOME/.config/i3/rofi"
+    ln -sf "$ROFI_THEME_DIR/${themes[$selected]}.rasi" "$ROFI_THEME_DIR/active-theme.rasi"
+    
+    # Reload i3
     i3-msg reload
     
     # Show notification if available
