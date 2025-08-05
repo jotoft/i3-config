@@ -256,28 +256,11 @@ bindsym $mod+F10 mode "scratch"
 bindsym $mod+c mode "scratch"
 bindsym $mod+r mode "Size"
 
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-bar {
-    i3bar_command i3bar --transparency
-    status_command i3blocks
-    # DP-2 if wanted on 4K display
-    #tray_output DP-4
-    tray_output DP-2
-    
-    colors {
-        background $base
-        statusline $text
-        separator  $overlay0
+# Include theme before bar configuration
+include themes/active-theme
 
-        # class            border     backgr.    text
-        focused_workspace  $mauve     $mauve     $base
-        active_workspace   $surface2  $base      $text
-        inactive_workspace $surface0  $base      $text
-        urgent_workspace   $red       $red       $base
-        binding_mode       $yellow    $yellow    $base
-    }
-}
+# Include bar configuration (which uses the theme variables)
+include bar.conf
 
 bindsym $mod2+g bar mode invisible
 bindsym $mod2+$mod+g bar mode toggle
@@ -335,7 +318,6 @@ bindsym $mod+$mod2+r exec /home/jtoft/.screenlayout/offon.sh
 for_window [all] title_window_icon on
 
 include i3.autostart
-include themes/active-theme
 # Settings
 focus_wrapping no
 
