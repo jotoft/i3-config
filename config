@@ -29,7 +29,8 @@ floating_modifier $mod
 bindsym $mod+Return exec alacritty
 bindsym $mod+t exec alacritty
 
-bindsym $mod+b exec firefox
+bindsym $mod+b exec google-chrome-stable --profile-directory="Default"
+bindsym $mod+Shift+b exec google-chrome-stable --profile-directory="Profile 1"
 bindsym $mod+p exec thunar
 
 # scratchpad
@@ -42,6 +43,7 @@ workspace_auto_back_and_forth yes
 
 # Rofi
 bindsym $mod+space exec rofi -dpi 286 -show combi
+bindsym $mod+Shift+t exec /home/jtoft/.config/i3/rofi-theme-switcher.sh
 bindsym --whole-window $mod+button9 exec rofi -dpi 324 -show window -me-accept-entry "" -me-accept-custom MousePrimary -window-command 'i3-msg [[id=\"{window}\"]] move workspace current'
 bindsym $mod2+space exec rofi -dpi 180 -show window -me-accept-entry "" -kb-accept-entry KP_Enter -kb-accept-alt Return -window-command 'i3-msg [[id=\"{window}\"]] move workspace current &&  i3-msg [[id=\"{window}\"]] focus'
 
@@ -59,7 +61,7 @@ bindsym $mod2+p [class="jetbrains-pycharm"] focus
 bindsym $mod2+a [class="Slack"] focus
 bindsym $mod2+c [class="jetbrains-clion"] focus
 bindsym $mod2+r [class="thunderbird"] focus
-bindsym $mod2+b [class="firefox"] focus
+bindsym $mod2+b exec firefox
 #bindsym $mod2+t [class="Alacritty" floating_from="user"] move workspace current
 
 # Clear all user made floating windows
@@ -262,9 +264,18 @@ bar {
     # DP-2 if wanted on 4K display
     #tray_output DP-4
     tray_output DP-2
+    
     colors {
-        background #00002000
-        statusline #ffffffff
+        background $base
+        statusline $text
+        separator  $overlay0
+
+        # class            border     backgr.    text
+        focused_workspace  $mauve     $mauve     $base
+        active_workspace   $surface2  $base      $text
+        inactive_workspace $surface0  $base      $text
+        urgent_workspace   $red       $red       $base
+        binding_mode       $yellow    $yellow    $base
     }
 }
 
@@ -313,7 +324,7 @@ assign [class="Zim"] ℰ
 for_window [class="^.*"] border pixel 1
 # Startup Applications
 # exec --no-startup-id /home/jtoft/.screenlayout/ultrawide_27_left.sh
-exec --no-startup-id picom
+exec --no-startup-id picom --config ~/.config/picom/picom.conf
 exec --no-startup-id /home/jtoft/.screenlayout/latest.sh
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id flameshot
@@ -324,6 +335,7 @@ bindsym $mod+$mod2+r exec /home/jtoft/.screenlayout/offon.sh
 for_window [all] title_window_icon on
 
 include i3.autostart
+include themes/active-theme
 # Settings
 focus_wrapping no
 
