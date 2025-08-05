@@ -1,0 +1,4 @@
+# Autostart applications for i3
+
+# Start xfce4-notifyd notification daemon
+exec --no-startup-id systemctl --user start xfce4-notifyd.service
