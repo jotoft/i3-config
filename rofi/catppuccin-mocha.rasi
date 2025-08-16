@@ -40,7 +40,7 @@
     urgent: @red;
     
     border-radius: 10px;
-    font: "Noto Sans 14";
+    font: "Noto Sans 18";
 }
 
 window {
